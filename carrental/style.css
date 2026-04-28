@@ -116,29 +116,28 @@ body {
     grid-column: 1 / -1;
     margin-bottom: 40px;
 
-    /* --- Penambahan Kotak --- */
-    background-color: #393E46; /* Warna kotak abu-abu gelap */
-    padding: 15px;             /* Jarak teks ke pinggir kotak */
-    border-radius: 8px;        /* Sudut kotak sedikit melengkung */
-    border: 1px solid #444;    /* Garis pinggir tipis agar lebih tegas */
-    max-width: 300px;          /* Lebar maksimal kotak */
-    margin-left: auto;         /* Tengah secara otomatis */
-    margin-right: auto;        /* Tengah secara otomatis */
+    background-color: #393E46;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .car-item {
-    background-color: #393E46; /* Warna abu-abu gelap agar kontras dengan body #222831 */
-    border-radius: 15px;       /* Membuat sudut kartu melengkung halus */
-    overflow: hidden;          /* Memastikan gambar tidak keluar dari lengkungan sudut */
+    background-color: #393E46;
+    border-radius: 15px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Memberikan bayangan lembut */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .car-item:hover {
-    transform: translateY(-10px); /* Kartu sedikit terangkat */
-    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.2); /* Bayangan bercahaya warna biru turkis */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4);
 }
 
 .car-item img {
@@ -147,71 +146,64 @@ body {
     object-fit: cover;
 }
 
-/* Container pembungkus (car-content) agar tombol rapi di bawah */
 .car-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-grow: 1; /* Mendorong tombol ke bawah jika teks deskripsi pendek */
+    flex-grow: 1;
 }
 
-/* Jarak deskripsi ke tombol */
 .car-content p {
     margin-bottom: 20px;
     color: #ccc;
-    flex-grow: 1; /* Penting: mendorong tombol ke dasar */
+    flex-grow: 1;
 }
 
-/* === GAYA TOMBOL UTAMA (PREMIUM FLASH EFFECT) === */
 .btn-rent {
-    position: relative; /* Wajib untuk posisi efek ::after */
+    position: relative;
     width: 100%;
     padding: 12px 24px;
-    background-color: transparent; /* Dasar transparan */
-    color: #00ADB5; /* Warna teks biru turkis */
-    border: 2px solid #00ADB5; /* Garis tepi */
-    border-radius: 8px; /* Sudut sedikit membulat */
-    font-family: 'Poppins', sans-serif; /* Pastikan font modern */
+    background-color: transparent;
+    color: #ff5722;
+    border: 2px solid #ff5722;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
     font-size: 1em;
     font-weight: 600;
-    text-transform: uppercase; /* Teks kapital semua */
-    letter-spacing: 1px; /* Jarak antar huruf */
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
-    overflow: hidden; /* Menyembunyikan efek flash saat keluar tombol */
-    transition: all 0.4s ease; /* Transisi halus */
+    overflow: hidden;
+    transition: all 0.4s ease;
     z-index: 1;
 }
 
-/* Efek Sinar Flash (Pseudo-element) */
 .btn-rent::after {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Mulai dari luar tombol sebelah kiri */
+    left: -100%;
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: all 0.5s ease;
-    z-index: -1; /* Berada di belakang teks tombol */
+    z-index: -1;
 }
 
-/* === EFEK SAAT HOVER (KURSOR DI ATAS TOMBOL) === */
 .btn-rent:hover {
-    color: #222831; /* Warna teks berubah gelap saat background menyala */
-    background-color: #00ADB5; /* Background menyala penuh */
-    box-shadow: 0 0 20px rgba(0, 173, 181, 0.6); /* Efek pendaran cahaya (glow) */
-    transform: translateY(-3px); /* Tombol sedikit terangkat */
+    color: #ebf1fb;
+    background-color: #ff5722;
+    box-shadow: 0 5 15px rgba(255, 87, 34, 0.4);
+    transform: translateY(-3px);
 }
 
-/* Menjalankan efek sinar flash saat hover */
 .btn-rent:hover::after {
-    left: 100%; /* Sinar melintas ke kanan */
+    left: 100%;
 }
 
-/* Efek saat tombol diklik (Active) */
 .btn-rent:active {
-    transform: translateY(-1px); /* Sedikit turun saat ditekan */
+    transform: translateY(-1px);
     box-shadow: 0 0 10px rgba(0, 173, 181, 0.4);
 }
