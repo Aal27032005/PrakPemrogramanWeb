@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental</title>
+    <title>All Rent Car</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
      <header class="header">
     <nav class="navbar">
-        <a href="nav.html">Home</a>
-        <a href="index.html">Cars</a>
+        <a href="#">Home</a>
+        <a href="#Cars">Cars</a>
         <a href="list.html">About</a>
         <a href="form.html">Contact</a>
     </nav>    
@@ -42,40 +42,47 @@
                 <label for="return-date">Rental End Date:</label>
                 <input type="date" id="return-date" name="return-date">
             </div>
-             <div class="form-group">
-                <label for="where will you go"></label>
-                <label for=""></label>
-                <input type="text" id="where will you go" name="where will you go" placeholder="Where will you go?">
-            </div>
             <button type="submit">Search</button>
         </div>
     </div>
 
     <div class="car-list">
-        <h2>Car List</h2>
+        <h2 id="Cars">Car List</h2>
         <div class="car-item">
-            <img src="https://1.bp.blogspot.com/-VBmGwbaNIc8/U-K2o1hx8uI/AAAAAAAADdM/eMeNG7egT7A/s1600/gambar+mobil+mainan+anak.jpg" alt="Car 1">
-            <h3>Xpander</h3>
-            <h4>Rp 500.000/day</h4>
-            <p>can bring you to your destination with comfort and safety</p>
-        </div>
-        <div class="car-item">
-            <img src="https://3.bp.blogspot.com/-nJdG-Q8c-Zs/U_OgZMECAXI/AAAAAAAAEcE/bdOeiwK6VqM/s1600/gambar%2Bmobil%2Bsport%2Blamborgini.jpg" alt="Car 2">
+            <img src="Lamborghini.jpg" alt="Car 1">
+            <div class="car-content">
             <h3>Lamborghini</h3>
-            <h4>Rp 1.000.000/day</h4>
+            <h4>Rp 5.000.000/day</h4>
+            <p>can bring you to your destination with comfort and safety</p>
+            <button class="btn-rent">Rent Now</button>
+            </div>
+        </div>
+        <div class="car-item">
+            <img src="Mustang.jpg" alt="Car 2">
+            <div class="car-content">
+            <h3>Mustang</h3>
+            <h4>Rp 5.000.000/day</h4>
             <p>Experience the thrill of luxury and performance</p>
+            <button class="btn-rent">Rent Now</button>
+            </div>
         </div>
         <div class="car-item">
-            <img src="https://cdn.pixabay.com/photo/2021/07/27/14/18/car-6496984_1280.jpg" alt="Car 2">
-            <h3>Car 2</h3>
-            <h4>Rp 750.000/day</h4>
+            <img src="bmw.jpg" alt="Car 2">
+            <div class="car-content">
+            <h3>BMW</h3>
+            <h4>Rp 3.000.000/day</h4>
             <p>Comfortable and reliable for your travels</p>
+            <button class="btn-rent">Rent Now</button>
+            </div>
         </div>
         <div class="car-item">
-            <img src="https://www.teahub.io/photos/full/365-3658518_kumpulan-gambar-mobil-sport.jpg" alt="Car 2">
-            <h3>Car 2</h3>
-            <h4>Rp 750.000/day</h4>
+            <img src="mobil3.jpg" alt="Car 2">
+            <div class="car-content">
+            <h3>Porsche</h3>
+            <h4>Rp 5.000.000/day</h4>
             <p>Comfortable and reliable for your travels</p>
+            <button class="btn-rent">Rent Now</button>
+            </div>
         </div>
     </div>
 </body>

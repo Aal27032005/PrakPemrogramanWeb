@@ -1,6 +1,6 @@
 #search {
     width: 100%;
-    height: 50em;
+    height: 60em;
     background-image: url("https://images.unsplash.com/photo-1610809376778-928ee2c3a561?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     display: flex;
@@ -8,15 +8,14 @@
     align-items: center;
     flex-direction: column;
 }
+
  .header {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
-            padding: 20px 10%;
+            padding: 20px;
             background: #222831;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             z-index: 100;
         }
@@ -32,11 +31,11 @@
         }
         .navbar a {
             font-size: 18px;
-            color: #EEEEEE;
-            text-decoration: none;
-            font-weight: 500;
+            color: #f9f9f9;
+            text-decoration: justify;
+            font-weight: 600;
             margin-left: 35px;
-            transition: 0.3s;
+            transition: 0.5s;
         }
         .navbar a:hover {
             color: #00ADB5;
@@ -44,7 +43,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(95, 99, 99);
+    background-color: #222831;
 }
 
 .title {
@@ -112,22 +111,107 @@ body {
 }
 
 .car-list h2 {
-    font-size: 2em;
-    margin: 2em 0;
-    grid-column: 1 / -1;
+    color: white;
     text-align: center;
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+
+    /* --- Penambahan Kotak --- */
+    background-color: #393E46; /* Warna kotak abu-abu gelap */
+    padding: 15px;             /* Jarak teks ke pinggir kotak */
+    border-radius: 8px;        /* Sudut kotak sedikit melengkung */
+    border: 1px solid #444;    /* Garis pinggir tipis agar lebih tegas */
+    max-width: 300px;          /* Lebar maksimal kotak */
+    margin-left: auto;         /* Tengah secara otomatis */
+    margin-right: auto;        /* Tengah secara otomatis */
 }
 
 .car-item {
+    background-color: #393E46; /* Warna abu-abu gelap agar kontras dengan body #222831 */
+    border-radius: 15px;       /* Membuat sudut kartu melengkung halus */
+    overflow: hidden;          /* Memastikan gambar tidak keluar dari lengkungan sudut */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: min(22rem, 100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Memberikan bayangan lembut */
+}
+
+.car-item:hover {
+    transform: translateY(-10px); /* Kartu sedikit terangkat */
+    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.2); /* Bayangan bercahaya warna biru turkis */
 }
 
 .car-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+/* Container pembungkus (car-content) agar tombol rapi di bawah */
+.car-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1; /* Mendorong tombol ke bawah jika teks deskripsi pendek */
+}
+
+/* Jarak deskripsi ke tombol */
+.car-content p {
+    margin-bottom: 20px;
+    color: #ccc;
+    flex-grow: 1; /* Penting: mendorong tombol ke dasar */
+}
+
+/* === GAYA TOMBOL UTAMA (PREMIUM FLASH EFFECT) === */
+.btn-rent {
+    position: relative; /* Wajib untuk posisi efek ::after */
+    width: 100%;
+    padding: 12px 24px;
+    background-color: transparent; /* Dasar transparan */
+    color: #00ADB5; /* Warna teks biru turkis */
+    border: 2px solid #00ADB5; /* Garis tepi */
+    border-radius: 8px; /* Sudut sedikit membulat */
+    font-family: 'Poppins', sans-serif; /* Pastikan font modern */
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase; /* Teks kapital semua */
+    letter-spacing: 1px; /* Jarak antar huruf */
+    cursor: pointer;
+    overflow: hidden; /* Menyembunyikan efek flash saat keluar tombol */
+    transition: all 0.4s ease; /* Transisi halus */
+    z-index: 1;
+}
+
+/* Efek Sinar Flash (Pseudo-element) */
+.btn-rent::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai dari luar tombol sebelah kiri */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.5s ease;
+    z-index: -1; /* Berada di belakang teks tombol */
+}
+
+/* === EFEK SAAT HOVER (KURSOR DI ATAS TOMBOL) === */
+.btn-rent:hover {
+    color: #222831; /* Warna teks berubah gelap saat background menyala */
+    background-color: #00ADB5; /* Background menyala penuh */
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.6); /* Efek pendaran cahaya (glow) */
+    transform: translateY(-3px); /* Tombol sedikit terangkat */
+}
+
+/* Menjalankan efek sinar flash saat hover */
+.btn-rent:hover::after {
+    left: 100%; /* Sinar melintas ke kanan */
+}
+
+/* Efek saat tombol diklik (Active) */
+.btn-rent:active {
+    transform: translateY(-1px); /* Sedikit turun saat ditekan */
+    box-shadow: 0 0 10px rgba(0, 173, 181, 0.4);
 }
