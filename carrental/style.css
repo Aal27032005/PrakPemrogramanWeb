@@ -31,7 +31,7 @@ html{
             margin-left: 35px;
             transition: 0.5s;
             border-radius: 20px;
-            padding: 8px 12px;         */
+            padding: 8px 12px;
         }
         .navbar a:hover {
             color: #ffffff;
@@ -267,4 +267,63 @@ body {
 .icon {
     font-size: 1.2em;
     margin-top: 2px;
+}
+
+.footer {
+    background-color: #1a1a2e;
+    padding: 40px 20px 20px 20px;
+    color: #f9f9f9;
+    border-top: 2px solid #bc13fe;
+    box-shadow: 0 -5px 20px rgba(188, 19, 254, 0.1);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    margin-bottom: 30px;
+}
+
+.footer-brand .footer-logo {
+    font-size: 28px;
+    color: #bc13fe;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 10px #bc13fe;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.footer-hr {
+    border: 0;
+    border-top: 1px solid #311b92;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #888;
+}
+
+.heart {
+    color: #bc13fe;
+    display: inline-block;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
