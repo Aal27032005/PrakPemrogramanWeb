@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 #search {
     width: 100%;
     height: 60em;
@@ -13,32 +17,25 @@
             position: fixed;
             width: 100%;
             padding: 20px;
-            background: #222831;
+            background: #000000c2;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 100;
-        }
-        .logo {
-            font-size: 25px;
-            color: #EEEEEE;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .logo:hover {
-            color: #00ADB5;
-        }
+    }
         .navbar a {
             font-size: 18px;
             color: #f9f9f9;
-            text-decoration: justify;
+            text-decoration: none;
             font-weight: 600;
             margin-left: 35px;
             transition: 0.5s;
+            border-radius: 20px;
+            padding: 8px 12px;         */
         }
         .navbar a:hover {
-            color: #00ADB5;
+            color: #ffffff;
+            background-color: #bb13fe8d;
         }
 
 body {
@@ -94,7 +91,7 @@ body {
     padding: 0.5em 1em;
     border: none;
     border-radius: 0.5em;
-    background-color: #ff5722;
+    background-color: orangered;
     color: white;
     cursor: pointer;
 }
@@ -137,7 +134,8 @@ body {
 
 .car-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 0 30px rgba(188, 19, 254, 0.6);
+    border-color: #bc13fe;
 }
 
 .car-item img {
@@ -166,8 +164,8 @@ body {
     width: 100%;
     padding: 12px 24px;
     background-color: transparent;
-    color: #ff5722;
-    border: 2px solid #ff5722;
+    color: #bc13fe;
+    border: 2px solid #bc13fe;
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
@@ -194,8 +192,8 @@ body {
 
 .btn-rent:hover {
     color: #ebf1fb;
-    background-color: #ff5722;
-    box-shadow: 0 5 15px rgba(255, 87, 34, 0.4);
+    background-color: #bc13fe;
+    box-shadow: 0 5 15px rgba(188, 19, 254, 0.6);
     transform: translateY(-3px);
 }
 
@@ -240,7 +238,7 @@ body {
 }
 
 .contact-info h3, .contact-locations h3 {
-    color: #ff5722;
+    color: #00ADB5;
     margin-bottom: 25px;
     border-bottom: 2px solid #444;
     padding-bottom: 10px;
