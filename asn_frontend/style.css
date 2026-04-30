@@ -1,0 +1,114 @@
+.hero-section {
+    background-image: url("tugu.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 50px;
+}
+
+.header {
+            position: fixed;
+            width: 100%;
+            padding: 10px;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+}
+
+.navbar a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: justify;
+            font-weight: 600;
+            margin-left: 5px;
+            allign-items: center;
+            transition: 0.5s;
+            border-radius: 20px;
+            padding: 10px 12px;
+}
+.navbar a:hover {
+            color: #ffffff;
+            background-color: #2100b5;
+}
+
+.destinasi {
+    color: rgb(58, 16, 49);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.list-wisata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.wisata-item1 {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wisata-item1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px #6607078e;
+    transition: all 0.3s ease;
+}
+
+.wisata-item2 {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wisata-item2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px #6607078e;
+    transition: all 0.3s ease;
+}
+
+.wisata-item3 {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wisata-item3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px #6607078e;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    background-color: #1a1a2e;
+    padding: 20px 20px 20px 20px;
+    color: #f9f9f9;
+    border-top: 2px solid #feb413;
+    box-shadow: 0 -5px 20px rgba(188, 19, 254, 0.1);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #888;
+}
