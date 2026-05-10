@@ -1,4 +1,3 @@
-// Database Produk
 const semuaProduk = [
     { 
         id: 1, 
@@ -47,42 +46,42 @@ const semuaProduk = [
         nama: "Kursi Tamu Jati", 
         kategori: "kursi", 
         harga: "Rp 1.200.000", 
-        gambar: ""
+        gambar: "ktamu.jpg"
     },
     { 
         id: 8,
         nama: "Meja Tamu Jati", 
         kategori: "meja", 
-        harga: "Rp 3.000.000", 
-        gambar: ""
+        harga: "Rp 1.000.000", 
+        gambar: "mtamu.jpg"
     },
     { 
         id: 9,
         nama: "Lemari Jati Modern", 
         kategori: "lemari", 
         harga: "Rp 3.500.000", 
-        gambar: ""
+        gambar: "ljmodern.jpg"
     },
     { 
         id: 10,
         nama: "Kursi Jati Elegant", 
         kategori: "kursi", 
         harga: "Rp 1.000.000", 
-        gambar: ""
+        gambar: "kjelegant.jpg"
     },
     { 
         id: 11,
         nama: "Meja Jati Minimalis", 
         kategori: "meja", 
-        harga: "Rp 2.000.000", 
-        gambar: ""
+        harga: "Rp 1.200.000", 
+        gambar: "mjminimalis.jpg"
     },
     { 
         id: 12,
         nama: "Lemari Jati Klasik", 
         kategori: "lemari", 
-        harga: "Rp 4.000.000", 
-        gambar: ""
+        harga: "Rp 3.200.000", 
+        gambar: "ljklasik.jpg"
     }
 ];
 
@@ -119,4 +118,47 @@ function filterProduk(kategori) {
 
 document.addEventListener('DOMContentLoaded', () => {
     tampilkanProduk();
+});
+
+let jumlahKeranjang = 0;
+
+function tambahKeKeranjang() {
+    jumlahKeranjang++;
+    const badge = document.getElementById('cart-count');
+    badge.innerText = jumlahKeranjang;
+    alert("Produk berhasil ditambahkan ke keranjang!");
+}
+
+function tampilkanProduk(filter = 'semua') {
+    const grid = document.getElementById('product-grid');
+    grid.innerHTML = ""; 
+
+    const produkDifilter = filter === 'semua' 
+        ? semuaProduk 
+        : semuaProduk.filter(p => p.kategori === filter);
+
+    produkDifilter.forEach(p => {
+        const kartu = `
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="${p.gambar}" alt="${p.nama}" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">${p.kategori}</p>
+                    <h4 class="product-name">${p.nama}</h4>
+                    <p class="product-price">${p.harga}</p>
+                    <button onclick="tambahKeKeranjang()" class="btn-beli">
+                        <i class="fas fa-plus"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        `;
+        grid.innerHTML += kartu;
+    });
+}
+
+document.getElementById('formKontak')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda secepatnya.");
+    this.reset();
 });

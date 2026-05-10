@@ -147,7 +147,7 @@ body {
 }
 
 .btn-hero:hover {
-    background-color: #451a03;
+    background-color: #916d59;
     transform: translateY(-3px);
 }
 
@@ -242,4 +242,122 @@ body {
 .product-price {
     font-weight: bold;
     color: #1f2937;
+}
+
+.btn-beli {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #78350f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-beli:hover {
+    background-color: #c7967c;
+}
+
+.product-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+.kontak-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.kontak-wrapper {
+    display: flex;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.kontak-info {
+    flex: 1;
+}
+
+.kontak-form {
+    flex: 1.5;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #78350f;
+    width: 30px;
+}
+
+.info-item h4 {
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #78350f;
+}
+
+@media (max-width: 768px) {
+    .kontak-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
 }

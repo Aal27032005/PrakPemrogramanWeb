@@ -16,7 +16,7 @@
                 <li><a href="#" class="link">Beranda</a></li>
                 <li><a href="#katalog" class="link">Katalog</a></li>
                 <li><a href="https://jatijayafurniture.infinityfreeapp.com/" class="link" target="_blank">Tentang kami</a></li>
-                <li><a href="#" class="link">Kontak</a></li>
+                <li><a href="#formKontak" class="link">Kontak</a></li>
             </ul>
             <div class="nav-icon">
                 <button class="icon-button"><i class="fas fa-bars"></i></button>
@@ -50,6 +50,60 @@
     <div id="product-grid" class="product-grid">
     </div>
 </main>
+<section id="kontak" class="kontak-container">
+    <div class="katalog-header">
+        <h2>Hubungi Kami</h2>
+        <div class="divider"></div>
+        <p>Ada pertanyaan atau ingin pemesanan custom? Hubungi kami!</p>
+    </div>
+
+    <div class="kontak-wrapper">
+        <div class="kontak-info">
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Telepon & WhatsApp</h4>
+                    <p>+6282221432456</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>jatijaya@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Showroom</h4>
+                    <p>Jl. Jati  No. 45, Jepara, Jawa Tengah</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126759.50150965701!2d110.6121404656641!3d-6.592751336041604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7118ce5c73d9e5%3A0xc723b7b25287f34c!2sJepara%2C%20Kec.%20Jepara%2C%20Kabupaten%20Jepara%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="kontak-form">
+            <form id="formKontak">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Alamat Email</label>
+                    <input type="email" placeholder="email@contoh.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Pesan</label>
+                    <textarea rows="5" placeholder="Tuliskan pesan atau detail pesanan Anda..." required></textarea>
+                </div>
+                <button type="submit" class="btn-hero">Kirim Pesan</button>
+            </form>
+        </div>
+    </div>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
