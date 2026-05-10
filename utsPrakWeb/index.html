@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jati Jaya Furniture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>JATI JAYA <span>FURNITURE</span></h1>
+            </div>
+            <ul class="nav-link">
+                <li><a href="#" class="link">Beranda</a></li>
+                <li><a href="#katalog" class="link">Katalog</a></li>
+                <li><a href="https://jatijayafurniture.infinityfreeapp.com/" class="link" target="_blank">Tentang kami</a></li>
+                <li><a href="#" class="link">Kontak</a></li>
+            </ul>
+            <div class="nav-icon">
+                <button class="icon-button"><i class="fas fa-bars"></i></button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Selamat Datang di Jati Jaya Furniture</h2>
+            <p>Buat rumah anda menjadi lebih nyaman bersama jati jaya furniture</p>
+            <a href="#katalog" class="btn-hero">Lihat Koleksi</a>
+        </div>
+    </header>
+<main id="katalog" class="katalog-container">
+    <div class="katalog-header">
+        <h2>Koleksi Furnitur Kami</h2>
+        <div class="divider"></div>
+        
+        <div class="filter-buttons">
+            <button onclick="filterProduk('semua')" class="btn-filter active" id="btn-semua">Semua</button>
+            <button onclick="filterProduk('kursi')" class="btn-filter" id="btn-kursi">Kursi</button>
+            <button onclick="filterProduk('meja')" class="btn-filter" id="btn-meja">Meja</button>
+            <button onclick="filterProduk('lemari')" class="btn-filter" id="btn-lemari">Lemari</button>
+        </div>
+    </div>
+    <div id="product-grid" class="product-grid">
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
